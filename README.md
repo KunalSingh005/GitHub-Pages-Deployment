@@ -23,3 +23,10 @@ This project demonstrates a practical understanding of CI/CD principles for auto
 * **Frontend:** HTML5, CSS3
 * **DevOps:** GitHub Actions, CI/CD, YAML
 * **Platform:** GitHub Pages
+
+
+## Project Source
+
+This project was completed as part of the backend developer roadmap from roadmap.sh.
+
+**Project Page URL:** [https://roadmap.sh/projects/GitHub Pages Deployment](https://roadmap.sh/projects/github-actions-deployment-workflow)
