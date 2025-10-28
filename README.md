@@ -5,7 +5,7 @@ This repository contains my personal portfolio website, built with HTML & CSS. I
 ## ✨ Live Website URL
 
 **You can view the live portfolio here:**
-**[https://KunalSingh005.github.io/gh-deployment-workflow/](https://KunalSingh005.github.io/gh-deployment-workflow/)**
+**[https://KunalSingh005.github.io/gh-deployment-workflow/](https://kunalsingh005.github.io/GitHub-Pages-Deployment/)**
 
 ---
 
