@@ -1,0 +1,52 @@
+name: Deploy to GitHub Pages
+
+# Requirement: Sirf 'index.html' change hone par run karo
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'index.html'
+
+# Permissions jo GitHub ko deployment ke liye chahiye
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  # 'build' job ka naam hai
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Root directory ('.') ko upload karo
+          path: '.'
+
+  # 'deploy' job ka naam hai
+  deploy:
+    # 'deploy' job 'build' job ke poora hone ke baad chalega
+    needs: build
+    
+    # Deployment ke liye permissions
+    permissions:
+      pages: write
+      id-token: write
+    
+    # Environment set karo
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
