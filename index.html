@@ -1,1 +1,302 @@
-<h1>Hello, this is test update</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunal Singh | DevOps Portfolio</title>
+    <style>
+        /* --- Global Styles & Dark Theme --- */
+        :root {
+            --bg-color: #121212;
+            --primary-color: #1e1e1e;
+            --secondary-color: #2a2a2a;
+            --text-color: #e0e0e0;
+            --accent-color: #3498db;
+            --border-color: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        h1, h2, h3 {
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.2rem; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; }
+        h3 { font-size: 1.5rem; }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* --- Header & Navigation --- */
+        .navbar {
+            background: var(--primary-color);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li a {
+            color: var(--text-color);
+            padding: 0 1.2rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- Hero Section --- */
+        #home {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 5rem; /* Offset for fixed navbar */
+        }
+
+        #home .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+            background-color: var(--secondary-color);
+        }
+
+        #home h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        #home .subtitle {
+            font-size: 1.3rem;
+            color: #aaa;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            margin: 0 0.75rem;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #fff;
+        }
+
+        /* --- About Section --- */
+        #about p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* --- Projects Section --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: var(--primary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-content h3 {
+            color: #fff;
+        }
+
+        .project-content .tech-stack {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin: 0.5rem 0 1rem 0;
+            font-style: italic;
+        }
+
+        .project-content .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .project-content .btn:hover {
+            background: #2980b9;
+        }
+
+        /* --- Contact Section --- */
+        #contact {
+            text-align: center;
+        }
+        #contact p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--primary-color);
+            border-top: 1px solid var(--border-color);
+            color: #888;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
+            
+            <h1>Kunal Singh</h1>
+            <p class="subtitle">Aspiring DevOps & Automation Engineer</p>
+            <div class="social-links">
+                <a href="https://github.com/KunalSingh005" target="_blank" title="GitHub">GitHub</a>
+                <a href="#" target="_blank" title="LinkedIn">LinkedIn</a>
+                </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm Kunal, a first-year student with a deep passion for technology, especially DevOps, Cloud Computing, and AI Automation. I am actively learning and building practical projects to turn my theoretical knowledge into real-world skills.
+            </p>
+            <p>
+                My goal is to master the tools and practices that power modern software, from building efficient CI/CD pipelines to managing robust infrastructure. I am a self-starter, always curious, and thrive on solving complex problems.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>GitHub Pages CI/CD</h3>
+                        <p class="tech-stack">GitHub Actions, YAML, CI/CD, HTML</p>
+                        <p>A simple CI/CD pipeline to automatically deploy a static website to GitHub Pages, triggered only on specific file changes.</p>
+                        <a href="https://github.com/KunalSingh005/gh-deployment-workflow" target="_blank" class="btn">View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Nginx Log Analyser</h3>
+                        <p class="tech-stack">Bash, awk, sort, uniq, head</p>
+                        <p>A Bash script that parses Nginx logs to find Top 5 IPs, requested paths, status codes, and user agents.</p>
+                        <a href="https://github.com/KunalSingh005/nginx-log-analyzer" target="_blank" class="btn">View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Log Archive Tool</h3>
+                        <p class="tech-stack">Bash, tar, date, cron</p>
+                        <p>A CLI tool that compresses a given log directory into a timestamped `.tar.gz` file for easy backup and management.</p>
+                        <a href="https://github.com/KunalSingh005/log-archive-tool" target="_blank" class="btn">View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Server Performance Monitor</h3>
+                        <p class="tech-stack">Bash, ps, awk, grep, top, free</p>
+                        <p>A Bash script that provides a color-coded, real-time summary of server health (CPU, Memory, Disk, Top Processes).</p>
+                        <a href="https://github.com/KunalSingh005/linux-performance-monitor" target="_blank" class="btn">View on GitHub</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>I'm always open to connecting and learning. Feel free to reach out!</p>
+            <div class="social-links">
+                <a href="https://github.com/KunalSingh005" target="_blank" title="GitHub">GitHub</a>
+                <a href="#" target="_blank" title="LinkedIn">LinkedIn</a>
+                </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kunal Singh. Built from scratch.</p>
+    </footer>
+
+</body>
+</html>
